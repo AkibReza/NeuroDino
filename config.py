@@ -57,8 +57,8 @@ MAX_FRAMES_PER_GENERATION = 6000
 # ---------------------------------------------------------------------------
 # Rendering / window layout
 # ---------------------------------------------------------------------------
-WINDOW_WIDTH = 1280
-WINDOW_HEIGHT = 820
+WINDOW_WIDTH = 1920
+WINDOW_HEIGHT = 1080
 SIDEBAR_WIDTH = 360            # right-hand leaderboard / controls panel
 GAME_AREA_WIDTH = WINDOW_WIDTH - SIDEBAR_WIDTH
 TOP_BAR_HEIGHT = 40            # thin status strip above the lanes
