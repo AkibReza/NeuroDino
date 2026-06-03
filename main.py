@@ -47,9 +47,8 @@ class App:
     def __init__(self):
         pygame.init()
         pygame.display.set_caption("NeuroDino - Neuroevolution Dinosaur")
-        info = pygame.display.Info()
-        w, h = info.current_w, info.current_h
-        self.screen = pygame.display.set_mode((w, h), pygame.FULLSCREEN | pygame.DOUBLEBUF | pygame.HWSURFACE)
+        w, h = config.WINDOW_WIDTH, config.WINDOW_HEIGHT
+        self.screen = pygame.display.set_mode((w, h), pygame.DOUBLEBUF | pygame.HWSURFACE)
         config.init_layout(w, h)
         self.clock = pygame.time.Clock()
         self.renderer = Renderer(self.screen)
