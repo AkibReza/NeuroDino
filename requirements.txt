@@ -1,0 +1,5 @@
+pygame>=2.5
+numpy>=1.24
+matplotlib>=3.7
+# Optional: pandas improves CSV handling if installed
+# pandas>=2.0
