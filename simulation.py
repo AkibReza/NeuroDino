@@ -24,6 +24,7 @@ class Simulation:
         self.speed = config.BASE_SPEED
         self.frame = 0
         self.alive_count = len(dinos)
+        self.survivor_count = len(dinos)
         self.finished = False
         for d in self.dinos:
             d.reset()
@@ -74,6 +75,7 @@ class Simulation:
                 alive += 1
 
         self.alive_count = alive
+        self.survivor_count = sum(1 for d in self.dinos if d.alive or d.solved)
         self.frame += 1
 
         if self.alive_count == 0 or self.frame >= config.MAX_FRAMES_PER_GENERATION:
@@ -110,7 +112,7 @@ class Simulation:
         avg = sum(fits) / len(fits) if fits else 0.0
         champion = max(self.dinos, key=lambda d: d.fitness) if self.dinos else None
         return {
-            "alive": self.alive_count,
+            "alive": self.survivor_count,
             "best_fitness": best,
             "avg_fitness": avg,
             "champion": champion,
