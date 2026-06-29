@@ -216,4 +216,3 @@ runs its `NeuralNetwork`, and updates physics). When the generation ends,
 in headless mode it's skipped until the generation finishes.
 
 Enjoy watching them learn.
-Thank you. 
